@@ -1,0 +1,70 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+svg {
+  width: 40px;
+  height: 40px;
+  stroke: #b4b4b4;
+  filter: drop-shadow(0 1px 2px #7a7a7a);
+}
+body {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: #202020;
+}
+.menu-container {
+  width: 495px;
+  height: 100px;
+  border-radius: 45px;
+  background-color: #151515;
+  box-shadow: inset 0 0 2px 2px rgba(0, 0, 0, 0.5);
+}
+.menu-list {
+  list-style: none;
+  width: inherit;
+  height: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1px;
+  width: 95px;
+  height: 90px;
+  background-color: #202020;
+  border-top: 1px solid #353535;
+  box-shadow: 0 15px 20px 0 #00000080;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.menu-item:first-child {
+  border-top-left-radius: 40px;
+  border-bottom-left-radius: 40px;
+}
+.menu-item:last-child {
+  border-top-right-radius: 40px;
+  border-bottom-right-radius: 40px;
+}
+.menu-link {
+  display: inline-block;
+  text-decoration: none;
+  transition: all 0.5s;
+}
+.menu-item.active {
+  background-color: #151515;
+  border-top: none;
+  border-bottom: 1px solid #252525;
+  box-shadow: inset 0 0 10px 1px #000000cc;
+}
+.menu-link.active-icon svg {
+  stroke: #fffebe;
+  filter: drop-shadow(0 2px 10px #ebebd2);
+}
